@@ -1,4 +1,5 @@
 import { getPosts } from "@/services/postsAPI";
+import Link from "next/link";
 import React from "react";
 
 
@@ -15,7 +16,9 @@ const PostsPage = async () => {
           {postsData?.slice(0,20).map((item) => (
             <div key={item.id} className="bg-[#FEF9E1] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-[#E5D0AC]">
             <h2 className="text-xl font-bold text-[#A31D1D] mb-2">{item.title}</h2>
-            <p className="text-[#6D2323]">{item.body}</p>
+            <p className="text-[#6D2323] mb-6">{item.body}</p>
+
+            <Link href={`/posts/${item.id}`} className="bg-[#6D2323] text-[#FEF9E1] text-xl rounded-lg px-6 py-2 " >See Details</Link>
         </div>
           ))}
         </div>
