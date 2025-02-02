@@ -17,7 +17,7 @@ const Nav = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo or Brand Name */}
         <Link href="/" className="text-[#A31D1D] text-2xl font-bold">
-          MySite
+          Next Hero
         </Link>
 
         {/* Navigation Links */}
