@@ -10,6 +10,7 @@ const Nav = () => {
     { title: "Services", link: "/services" },
     { title: "Contacts", link: "/contacts" },
     { title: "About", link: "/about" },
+    { title: "Meals", link: "/meals" },
   ];
 
   return (
