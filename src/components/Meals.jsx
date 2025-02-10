@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const Meals = () => {
@@ -38,9 +39,10 @@ const Meals = () => {
       <div className="grid grid-cols-3 gap-4 mt-12">
         {meals?.length > 0
           ? meals.map((meal) => (
-              <>
+              <div key={meal.idMeal}>
                 <div className="card bg-base-100 w-96 shadow-xl">
                   <div className="card-body">
+                    <Image src={meal.strMealThumb} alt="Image of food" width={'400'} height={"400"} />
                     <h2 className="card-title">{meal.strMeal}</h2>
                     <p>{meal.strInstructions.slice(0,300)}</p>
                     <div className="card-actions justify-end">
@@ -48,7 +50,7 @@ const Meals = () => {
                     </div>
                   </div>
                 </div>
-              </>
+              </div>
             ))
           : "No Data Found..."}
       </div>
