@@ -8,7 +8,7 @@ const Nav = () => {
     { title: "Posts", link: "/posts" },
     { title: "Login", link: "/login" },
     { title: "Services", link: "/services" },
-    { title: "Contacts", link: "/contacts" },
+    { title: "Gallery", link: "/gallery" },
     { title: "About", link: "/about" },
     { title: "Meals", link: "/meals" },
   ];

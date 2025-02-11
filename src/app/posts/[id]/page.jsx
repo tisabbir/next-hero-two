@@ -16,7 +16,7 @@ export const generateMetadata = async ({ params }) => {
         title: `${data.title}`, // Dynamic title
         description: `${data.body}`, // Dynamic description
     };
-};
+};       
 
 const getPostsDetails =  async (id) => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
