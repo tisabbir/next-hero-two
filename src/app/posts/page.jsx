@@ -2,6 +2,10 @@ import { getPosts } from "@/services/postsAPI";
 import Link from "next/link";
 import React from "react";
 
+export const metadata = {
+  title: "Next Post",
+  description: "The is post section.",
+};
 
 const PostsPage = async () => {
   const postsData = await getPosts();

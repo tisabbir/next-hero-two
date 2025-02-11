@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Next Hero Two",
-  description: "This is next hero two",
+  title: {
+    default:"Next Hero",
+    template: "%s | Next Hero"
+  },
+  description: "The most powerful Next JS App ever in the world",
 };
 
 export default function RootLayout({ children }) {

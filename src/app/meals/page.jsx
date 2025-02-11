@@ -1,6 +1,13 @@
 import Meals from '@/components/Meals';
 import React from 'react';
 
+export const metadata = {
+    title: {
+        absolute: "Meal"
+    },
+    description: "The is meal. Manusher Pola khaite aai.",
+  };
+
 const MealsPage = () => {
     return (
         <div className='space-y-4 m-12'>

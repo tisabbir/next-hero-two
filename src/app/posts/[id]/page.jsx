@@ -1,5 +1,23 @@
 import React from 'react';
 
+
+export const generateMetadata = async ({ params }) => {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`, {
+        cache: 'no-store', // Fetch fresh data for each request
+    });
+
+    if (!res.ok) {
+        throw new Error("Failed to fetch post data");
+    }
+
+    const data = await res.json();
+
+    return {
+        title: `${data.title}`, // Dynamic title
+        description: `${data.body}`, // Dynamic description
+    };
+};
+
 const getPostsDetails =  async (id) => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
     const data = res.json();
